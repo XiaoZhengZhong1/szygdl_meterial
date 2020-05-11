@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <script>
+        $.ajax({
+            type : "post",
+            url : "/getJson",
+            data : JSON.stringify(obj),
+            contentType: 'application/json',
+            success:function(data){
+                $('#baccoderId').val(data);
+            },
+            error:function(data){
+                console.log("error")
+                console.log(data)
+            }
+        })
+    </script>
+
+</html>
